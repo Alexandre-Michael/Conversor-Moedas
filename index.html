@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 style="margin-bottom: 20px;">Conversor de Moedas</h1>
+        <h2>Converta valores entre Dólar, Euro e Real.</h2>
+        <section class="converter">
+            <form class="box" id="currency-form">
+                <label for="amount">Valor a ser convertido:</label>
+                <input type="number" id="amount" name="amount" placeholder="Exemplo: 100" min="0" required>
+
+                <div class="currency-selectors">
+                    <select id="from-currency" name="from-currency" required>
+                        <option value="USD" selected>Dólar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="BRL">Real (BRL)</option>
+                    </select>
+
+                    <select id="to-currency" name="to-currency" required>
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="BRL" selected>Real (BRL)</option>
+                    </select>
+                </div>
+
+                <button type="submit">Converter</button>
+            </form>
+        </section>
+
+        <section class="result">
+            <div class="box">
+                <h2>Resultados da Conversão</h2>
+                <p id="conversion-result">Aguardando conversão...</p>
+            </div>
+        </section>
+
+        <section class="exchange-rate">
+            <div class="box">
+                <h2>Cotação Atual...</h2>
+                <p id="exchange-rate-info">Carregando cotações...</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
