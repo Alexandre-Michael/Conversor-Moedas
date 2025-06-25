@@ -16,10 +16,10 @@ async function updateQuote() {
 
     try {
         let response = await fetch(`https://economia.awesomeapi.com.br/json/last/${even}`);
-        let dados = await response.json();
+        let data = await response.json();
         let key = fromCurrency + toCurrency;
         // O valor da cotação (taxa de compra) de uma moeda para outra
-        let rate = parseFloat(dados[key].bid);
+        let rate = parseFloat(data[key].bid);
 
         exchangeRate.innerText = `1 ${fromCurrency} = ${rate.toFixed(4)} ${toCurrency}`;
 
@@ -51,10 +51,10 @@ async function conversion() {
 
     try {
         let response = await fetch(`https://economia.awesomeapi.com.br/json/last/${even}`);
-        let dados = await response.json();
+        let data = await response.json();
         let key = fromCurrency + toCurrency;
         // O valor da cotação (taxa de compra) de uma moeda para outra
-        let rate = parseFloat(dados[key].bid);
+        let rate = parseFloat(data[key].bid);
         let convertedAmount = (amount * rate).toFixed(2);
 
         result.innerText = `${amount.toFixed(2)} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
