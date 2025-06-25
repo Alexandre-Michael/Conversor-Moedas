@@ -41,6 +41,11 @@ async function conversion() {
         return;
     }
 
+    if (isNaN(amount)) {
+        result.innerText = "Por favor, insira um valor válido.";
+        return;
+    }
+
     let even = `${fromCurrency}-${toCurrency}`;
     console.log(even);
 
