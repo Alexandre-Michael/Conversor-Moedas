@@ -41,7 +41,7 @@ async function conversion() {
         return;
     }
 
-    if (isNaN(amount)) {
+    if (isNaN(amount) || amount <= 0) {
         result.innerText = "Por favor, insira um valor válido.";
         return;
     }
