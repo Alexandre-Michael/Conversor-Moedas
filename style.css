@@ -82,8 +82,27 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.currecncy-select {
+.currency-selectors {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+@media (max-width: 500px) {
+    .currency-selectors {
+        flex-direction: column;
+    }
+    
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
 }
