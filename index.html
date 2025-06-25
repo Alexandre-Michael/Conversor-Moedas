@@ -12,11 +12,11 @@
     <main class="container">
         <h1 style="margin-bottom: 20px;">Conversor de Moedas</h1>
         <h2>Converta valores entre Dólar, Euro e Real.</h2>
-        <section class="converter">
-            <form class="box" id="currency-form">
+        <section class="conversion">
+            <div class="box">
                 <label for="amount">Valor a ser convertido:</label>
-                <input type="number" id="amount" name="amount" placeholder="Exemplo: 100" min="0" required>
-
+                <input type="number" id="amount" placeholder="Exemplo: 100" min="0" required>
+                
                 <div class="currency-selectors">
                     <select id="from-currency" name="from-currency" required>
                         <option value="USD" selected>Dólar (USD)</option>
@@ -31,8 +31,8 @@
                     </select>
                 </div>
 
-                <button type="submit">Converter</button>
-            </form>
+                <button type="button" onclick="conversion()">Converter</button>
+            </div>
         </section>
 
         <section class="result">

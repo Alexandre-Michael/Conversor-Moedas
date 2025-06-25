@@ -62,7 +62,7 @@ button:hover {
     padding-block: 3em;
 }
 
-.converter, .result, .exchange-rate {
+.conversion, .result, .exchange-rate {
     display: flex;
     flex-direction: column;
     align-items: center;
